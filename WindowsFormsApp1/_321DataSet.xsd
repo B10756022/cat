@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="_321DataSet" targetNamespace="http://tempuri.org/_321DataSet.xsd" xmlns:mstns="http://tempuri.org/_321DataSet.xsd" xmlns="http://tempuri.org/_321DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="_321ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="_321ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsFormsApp1.Properties.Settings.GlobalReference.Default._321ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="記簿TableAdapter" GeneratorDataComponentClassName="記簿TableAdapter" Name="記簿" UserDataComponentName="記簿TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="_321ConnectionString (Settings)" DbObjectName="dbo.記簿" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT 日期 FROM dbo.記簿</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="日期" DataSetColumn="日期" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="_321DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="_321DataSet" msprop:Generator_UserDSName="_321DataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="記簿" msprop:Generator_TableClassName="記簿DataTable" msprop:Generator_TableVarName="table記簿" msprop:Generator_RowChangedName="記簿RowChanged" msprop:Generator_TablePropName="記簿" msprop:Generator_RowDeletingName="記簿RowDeleting" msprop:Generator_RowChangingName="記簿RowChanging" msprop:Generator_RowEvHandlerName="記簿RowChangeEventHandler" msprop:Generator_RowDeletedName="記簿RowDeleted" msprop:Generator_RowClassName="記簿Row" msprop:Generator_UserTableName="記簿" msprop:Generator_RowEvArgName="記簿RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="日期" msprop:Generator_ColumnVarNameInTable="column日期" msprop:Generator_ColumnPropNameInRow="日期" msprop:Generator_ColumnPropNameInTable="日期Column" msprop:Generator_UserColumnName="日期" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
