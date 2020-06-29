@@ -58,3 +58,16 @@ C:\Users\s9502\OneDrive\桌面\cat\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.c
 C:\Users\s9502\OneDrive\桌面\cat\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
 C:\Users\s9502\OneDrive\桌面\cat\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\s9502\OneDrive\桌面\cat\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\s9502\OneDrive\桌面\物件導向期末\結果檔\cat\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Users\s9502\OneDrive\桌面\物件導向期末\結果檔\cat\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\s9502\OneDrive\桌面\物件導向期末\結果檔\cat\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form2.resources
+C:\Users\s9502\OneDrive\桌面\物件導向期末\結果檔\cat\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form3.resources
+C:\Users\s9502\OneDrive\桌面\物件導向期末\結果檔\cat\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form4.resources
+C:\Users\s9502\OneDrive\桌面\物件導向期末\結果檔\cat\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\s9502\OneDrive\桌面\物件導向期末\結果檔\cat\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\s9502\OneDrive\桌面\物件導向期末\結果檔\cat\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\s9502\OneDrive\桌面\物件導向期末\結果檔\cat\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\s9502\OneDrive\桌面\物件導向期末\結果檔\cat\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\s9502\OneDrive\桌面\物件導向期末\結果檔\cat\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\s9502\OneDrive\桌面\物件導向期末\結果檔\cat\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\s9502\OneDrive\桌面\物件導向期末\結果檔\cat\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb

@@ -54,8 +54,35 @@ namespace WindowsFormsApp1
             {
                 if (File.Exists(path))
                 {
-                    DialogResult result =
-                    MessageBox.Show("今天已經寫過日記了，不能再寫一次喔！", "今天已寫過日記", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    int count = 0;
+                    string sTxt = "";
+                    string newPath = "./diary/result/" + DateTime.Now.ToString("yyyy_MM_dd") + ".txt";
+                    DialogResult dresult =
+                    MessageBox.Show("今天已經寫過日記了，是否要覆蓋？", "今天已寫過日記", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if(dresult == DialogResult.Yes)
+                        if(File.Exists(newPath))
+                        {
+                            StreamReader sr = new StreamReader(newPath);
+                            sTxt = sr.ReadToEnd();
+                            sr.Dispose();
+                            if (sTxt.Contains("愛情"))
+                                count++;
+                            if (sTxt.Contains("友情"))
+                                count++;
+                            if (sTxt.Contains("事業"))
+                                count++;
+                            if (sTxt.Contains("學業"))
+                                count++;
+                            if (n - count == 0)
+                                MessageBox.Show("今天已經抽完卡了，不能再抽了喔！");
+                            else
+                                n = n - count;
+                            string s = richTextBox1.Text.Remove(0, 10);
+                            //開始抽卡
+                            MessageBox.Show("可抽卡次數剩" + n + "次！", "抽卡提醒");
+                            save(path, "塔羅牌未抽卡次數：" + n + s);
+                            drawCardYN(path);
+                        }
                 }
                 else
                 {
