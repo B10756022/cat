@@ -258,7 +258,9 @@ namespace WindowsFormsApp1
                             }
                             //儲存解牌結果到TXT
                             string sTxt;
-                            
+                            newPath= "./diary/result/" + DateTime.Now.ToString("yyyy_MM_dd") + ".txt";
+
+
                             if (File.Exists(newPath))
                             {
                                 StreamReader sr = new StreamReader(newPath);
@@ -268,9 +270,21 @@ namespace WindowsFormsApp1
                             }
                             else
                                 sTxt = comboBox1.Text + "\n解牌結果：\n" + dataArray[i, 0] + "\n" + dataArray[i, 1] + "\n";
-                            StreamWriter sw = new StreamWriter(newPath);
-                            sw.Write(sTxt);
-                            sw.Dispose();
+                            try
+                            {
+                                StreamWriter sw = new StreamWriter(newPath, true);
+                                sw.Write(sTxt);
+                                sw.Dispose();
+                            }
+                            catch
+                            {
+                                FileStream fileStream = new FileStream(newPath, FileMode.Create);
+
+                                fileStream.Close();
+                                StreamWriter sw = new StreamWriter(newPath, true);
+                                sw.Write(sTxt);
+                                sw.Dispose();
+                            }
                             break;
                         }
                 }

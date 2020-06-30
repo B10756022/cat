@@ -212,7 +212,7 @@ namespace WindowsFormsApp1
                     }
                     if (dr == DialogResult.Yes)
                     {
-                        if(selectPath != "")
+                        if(selectPath != "" || selectPath != "./diary/result/")
                         {
                             File.Delete(selectPath);
                             listBox1.Items.RemoveAt(i);
@@ -255,14 +255,17 @@ namespace WindowsFormsApp1
                 button5.Enabled = false;
                 button4.Enabled = false;
                 listBox1.Items.Clear();
+            
                 foreach (string fname in System.IO.Directory.GetFileSystemEntries(pathTmp, "*.txt"))
                 {
                     /* fname 即為獲得的檔案名稱 */
                     string tmp = Path.GetFileNameWithoutExtension(fname);
                     listBox1.Items.Add(tmp);
                 }
-                if (listBox1.Items.Count == 0)
-                    MessageBox.Show("目前無資料，請再確認一次！", "紀錄為空", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            if(listBox1.Items.Count == 0)
+                MessageBox.Show("目前無資料，請再確認一次！", "紀錄為空", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            
+                    
                 
                 listBox1.Enabled = true;
                 button1.Enabled = false;
