@@ -30,7 +30,7 @@ namespace WindowsFormsApp1
         PictureBox pic2 = new PictureBox();
         PictureBox pic3 = new PictureBox();
         PictureBox pic4 = new PictureBox();
-        string newPath = "./diary/result/ " + DateTime.Now.ToString("yyyy_MM_dd") + ".txt";
+        string newPath = "./diary/result/" + DateTime.Now.ToString("yyyy_MM_dd") + ".txt";
         Button bt = new Button();
         string[,] dataArray;
         int number_of_words;

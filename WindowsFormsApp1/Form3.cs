@@ -155,11 +155,12 @@ namespace WindowsFormsApp1
                 if (listBox1.Items.Count == 0)
                     MessageBox.Show("目前無資料，請再確認一次！", "紀錄為空", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 richTextBox1.Enabled = false;
-                button5.Enabled = true;
                 listBox1.Enabled = true;
                 button1.Enabled = false;
                 button3.Enabled = false;
                 button7.Enabled = true;
+            button4.Enabled = false;
+            button5.Enabled = false;
             
             
         }
@@ -172,6 +173,8 @@ namespace WindowsFormsApp1
                 select = listBox1.SelectedItem.ToString();
                 string selectPath = pathTmp + select + ".txt";
                 button4.Enabled = true;
+                if(!richTextBox1.Text.Contains("抽卡次數"))
+                    button5.Enabled = true;
                 StreamReader sr = new StreamReader(selectPath);
                 richTextBox1.Text = sr.ReadToEnd();
                 sr.Close();
@@ -196,13 +199,25 @@ namespace WindowsFormsApp1
             {
                 if (select != "")
                 {
+                    string selectPath = "";
                     DialogResult dr =
                     MessageBox.Show("已選中" + select + "，是否要進行刪除？刪除後無法復原", "刪除", MessageBoxButtons.YesNo);
-                    string selectPath = "./diary/" + select + ".txt";
+                    if (richTextBox1.Text.Contains("抽卡次數"))
+                    {
+                        selectPath = "./diary/" + select + ".txt";
+                    }
+                    else
+                    {
+                        selectPath = "./diary/result/" + select + ".txt";
+                    }
                     if (dr == DialogResult.Yes)
                     {
-                        File.Delete(selectPath);
-                        listBox1.Items.RemoveAt(i);
+                        if(selectPath != "")
+                        {
+                            File.Delete(selectPath);
+                            listBox1.Items.RemoveAt(i);
+                        }
+                        
                     }
                 }
             }
