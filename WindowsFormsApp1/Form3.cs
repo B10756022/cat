@@ -142,7 +142,7 @@ namespace WindowsFormsApp1
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            select = null;
                 pathTmp = "./diary/";
                 //參考https://lifewth.com/c-get-infloder-dataname/
                 listBox1.Items.Clear();
@@ -155,7 +155,6 @@ namespace WindowsFormsApp1
                 if (listBox1.Items.Count == 0)
                     MessageBox.Show("目前無資料，請再確認一次！", "紀錄為空", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 richTextBox1.Enabled = false;
-                button4.Enabled = true;
                 button5.Enabled = true;
                 listBox1.Enabled = true;
                 button1.Enabled = false;
@@ -193,35 +192,50 @@ namespace WindowsFormsApp1
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if(select !="")
+            try
             {
-                DialogResult dr =
-                MessageBox.Show("已選中" + select + "，是否要進行刪除？刪除後無法復原", "刪除", MessageBoxButtons.YesNo);
-                string selectPath = "./diary/" + select + ".txt";
-                if (dr == DialogResult.Yes)
+                if (select != "")
                 {
-                    File.Delete(selectPath);
-                    listBox1.Items.RemoveAt(i);
+                    DialogResult dr =
+                    MessageBox.Show("已選中" + select + "，是否要進行刪除？刪除後無法復原", "刪除", MessageBoxButtons.YesNo);
+                    string selectPath = "./diary/" + select + ".txt";
+                    if (dr == DialogResult.Yes)
+                    {
+                        File.Delete(selectPath);
+                        listBox1.Items.RemoveAt(i);
+                    }
                 }
+            }
+            catch
+            {
+                MessageBox.Show("還沒選中資料，不能刪除喔！", "刪除失敗", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if (select == DateTime.Now.ToString("yyyy_MM_dd"))
+            try
             {
-                string path = "./diary/" + select + ".txt";
-                drawCardYN(path);
+                if (select == DateTime.Now.ToString("yyyy_MM_dd"))
+                {
+                    string path = "./diary/" + select + ".txt";
+                    drawCardYN(path);
+                }
+                else
+                    MessageBox.Show("不是今天不能補抽喔！", "補抽失敗", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else
-                MessageBox.Show("不是今天不能補抽喔！", "補抽失敗", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            catch
+            {
+                MessageBox.Show("還沒選中資料，不能補抽喔！", "補抽失敗", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
                 
 
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-                richTextBox1.Enabled = false;
+            select = null;
+            richTextBox1.Enabled = false;
                 pathTmp = "./diary/result/";
                 button5.Enabled = false;
                 button4.Enabled = false;
