@@ -233,7 +233,7 @@ namespace WindowsFormsApp1
                             AVLTree tree = new AVLTree();
                             tree.preOrder(tree.root);//查詢
                             watch.Stop();
-                            label3.Text = dataArray[i, 0];
+                            label3.Text = dataArray[i, 0].Remove(0, 3);
                             string tmp = dataArray[i, 1];
                             string elapsedTicks = watch.ElapsedTicks.ToString();
                             //顯示行控制
