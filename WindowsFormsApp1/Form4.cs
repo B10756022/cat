@@ -270,21 +270,11 @@ namespace WindowsFormsApp1
                             }
                             else
                                 sTxt = comboBox1.Text + "\n解牌結果：\n" + dataArray[i, 0] + "\n" + dataArray[i, 1] + "\n";
-                            try
-                            {
+                           
                                 StreamWriter sw = new StreamWriter(newPath, true);
                                 sw.Write(sTxt);
                                 sw.Dispose();
-                            }
-                            catch
-                            {
-                                FileStream fileStream = new FileStream(newPath, FileMode.Create);
-
-                                fileStream.Close();
-                                StreamWriter sw = new StreamWriter(newPath, true);
-                                sw.Write(sTxt);
-                                sw.Dispose();
-                            }
+                            
                             break;
                         }
                 }

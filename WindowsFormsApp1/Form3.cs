@@ -173,8 +173,7 @@ namespace WindowsFormsApp1
                 select = listBox1.SelectedItem.ToString();
                 string selectPath = pathTmp + select + ".txt";
                 button4.Enabled = true;
-                if(!richTextBox1.Text.Contains("抽卡次數"))
-                    button5.Enabled = true;
+                button5.Enabled = true;
                 StreamReader sr = new StreamReader(selectPath);
                 richTextBox1.Text = sr.ReadToEnd();
                 sr.Close();
@@ -233,8 +232,11 @@ namespace WindowsFormsApp1
             {
                 if (select == DateTime.Now.ToString("yyyy_MM_dd"))
                 {
-                    string path = "./diary/" + select + ".txt";
-                    drawCardYN(path);
+                    
+                        string path = "./diary/" + select + ".txt";
+                        drawCardYN(path);
+                    
+                    
                 }
                 else
                     MessageBox.Show("不是今天不能補抽喔！", "補抽失敗", MessageBoxButtons.OK, MessageBoxIcon.Error);
