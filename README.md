@@ -1,5 +1,5 @@
-# cat
-胖貓的一天（物件導向作業）
+# cat-物件導向作業
+胖貓的一天
 
 開發工具：Visual Studio
 演算法：AVL Tree
